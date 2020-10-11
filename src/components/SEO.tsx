@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
   <Head>
-    <title>{title} | Next.Js free admin template</title>
+    <title>{title} | Next.Js free admin react template</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords?.join(', ')} />
     <meta property="og:type" content="website" />
@@ -18,8 +18,8 @@ const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
     <meta name="twitter:creator" content="@AhmedElywh" />
     <meta name="twitter:image" content="" />
     <meta property="og:image" content="" />
-    <link rel="icon" type="image/png" href="/icons/icon-512x512.png" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" type="image/png" href="/icons/icon-72x72.png" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171177495-4"></script>
     <script
       dangerouslySetInnerHTML={{
