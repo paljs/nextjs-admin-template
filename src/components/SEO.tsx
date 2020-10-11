@@ -44,7 +44,29 @@ interface SEOProps {
 }
 
 SEO.defaultProps = {
-  keywords: ['React', 'Admin', 'free', 'nextjs', 'gatsbyjs', 'dashboard', 'themes', 'admin-template'],
+  description: 'Free admin dashboard template based on Next.Js with @paljs/ui component package',
+  keywords: [
+    'admin-dashboard',
+    'admin',
+    'react',
+    'reactjs',
+    'dashboard',
+    'dashboard-templates',
+    'themes',
+    'styled-components',
+    'styledcomponents',
+    'admin-template',
+    'free-admin-template',
+    'react-admin-dashboard',
+    'react-admin-panel',
+    'react-admin-component',
+    'nextjs',
+    'react-forms',
+    'react-select',
+    'react-accordion',
+    'react-chat',
+    'react-admin-template',
+  ],
 };
 
 export default SEO;
