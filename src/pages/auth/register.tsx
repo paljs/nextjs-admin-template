@@ -3,7 +3,7 @@ import { InputGroup } from '@paljs/ui/Input';
 import { Checkbox } from '@paljs/ui/Checkbox';
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import Auth from '../../components/Auth';
 import SEO from '../../components/SEO';
@@ -34,7 +34,10 @@ export default function Register() {
           <input type="password" placeholder="Confirm Password" />
         </Input>
         <Checkbox onChange={onCheckbox}>
-          Agree to <Link to="/">Terms & Conditions</Link>
+          Agree to{' '}
+          <Link href="/">
+            <a>Terms & Conditions</a>
+          </Link>
         </Checkbox>
         <Button status="Success" type="button" shape="SemiRound" fullWidth>
           Register
@@ -42,7 +45,10 @@ export default function Register() {
       </form>
       <Socials />
       <p>
-        Already have an account? <Link to="/auth/login">Log In</Link>
+        Already have an account?{' '}
+        <Link href="/auth/login">
+          <a>Log In</a>
+        </Link>
       </p>
     </Auth>
   );

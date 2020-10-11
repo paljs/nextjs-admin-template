@@ -7,7 +7,7 @@ import SEO from '../../components/SEO';
 export default function Cards() {
   return (
     <>
-      <SEO title="Cards" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Cards" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>

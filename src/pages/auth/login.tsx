@@ -2,7 +2,7 @@ import { Button } from '@paljs/ui/Button';
 import { InputGroup } from '@paljs/ui/Input';
 import { Checkbox } from '@paljs/ui/Checkbox';
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import Auth, { Group } from '../../components/Auth';
 import Socials from '../../components/Auth/Socials';
@@ -24,7 +24,9 @@ export default function Login() {
         </InputGroup>
         <Group>
           <Checkbox onChange={onCheckbox}>Remember me</Checkbox>
-          <Link to="/auth/request-password">Forgot Password?</Link>
+          <Link href="/auth/request-password">
+            <a>Forgot Password?</a>
+          </Link>
         </Group>
         <Button status="Success" type="button" shape="SemiRound" fullWidth>
           Login
@@ -32,7 +34,10 @@ export default function Login() {
       </form>
       <Socials />
       <p>
-        Don&apos;t have account? <Link to="/auth/register">Register</Link>
+        Don&apos;t have account?{' '}
+        <Link href="/auth/register">
+          <a>Register</a>
+        </Link>
       </p>
     </Auth>
   );

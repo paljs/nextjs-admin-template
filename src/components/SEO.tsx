@@ -1,85 +1,39 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import Head from 'next/head';
 
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-  }
-`;
-
-const SEO: React.FC<SEOProps> = ({ description, lang, meta, keywords, title }) => {
-  return (
-    <StaticQuery
-      query={detailsQuery}
-      render={(data) => {
-        const metaDescription = description || data.site.siteMetadata.description;
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang: lang ?? 'en',
-            }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription,
-              },
-              {
-                property: 'og:title',
-                content: title,
-              },
-              {
-                property: 'og:description',
-                content: metaDescription,
-              },
-              {
-                property: 'og:type',
-                content: 'website',
-              },
-              {
-                name: 'twitter:card',
-                content: 'summary',
-              },
-              {
-                name: 'twitter:creator',
-                content: data.site.siteMetadata.author,
-              },
-              {
-                name: 'twitter:title',
-                content: title,
-              },
-              {
-                name: 'twitter:description',
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords && keywords.length > 0
-                  ? {
-                      name: 'keywords',
-                      content: keywords.join(', '),
-                    }
-                  : [],
-              )
-              .concat(meta ?? [])}
-          />
-        );
+const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
+  <Head>
+    <title>{title} | Next.Js free admin template</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords?.join(', ')} />
+    <meta property="og:type" content="website" />
+    <meta name="og:title" property="og:title" content={title} />
+    <meta name="og:description" property="og:description" content={description} />
+    <meta property="og:site_name" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="@AhmedElywh" />
+    <meta name="twitter:image" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" type="image/png" href="/icons/icon-512x512.png" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171177495-4"></script>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'UA-171177495-4');
+              `,
       }}
     />
-  );
-};
-
-SEO.defaultProps = {
-  keywords: ['OAH', 'application', 'react'],
-};
+  </Head>
+);
 
 interface SEOProps {
   description?: string;
@@ -88,5 +42,9 @@ interface SEOProps {
   keywords?: string[];
   title: string;
 }
+
+SEO.defaultProps = {
+  keywords: ['React', 'Admin', 'free', 'nextjs', 'gatsbyjs', 'dashboard', 'themes', 'admin-template'],
+};
 
 export default SEO;

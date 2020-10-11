@@ -8,7 +8,7 @@ import SEO from '../../components/SEO';
 const TabPage = () => {
   return (
     <>
-      <SEO title="Tabs" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Tabs" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>

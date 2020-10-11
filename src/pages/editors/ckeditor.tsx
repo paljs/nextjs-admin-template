@@ -9,7 +9,7 @@ const ClassicEditor = !isSSR ? require('@ckeditor/ckeditor5-build-classic') : <d
 export default function CKEditorPage() {
   return (
     <Card>
-      <SEO title="CKEditor" keywords={['OAH', 'application', 'react']} />
+      <SEO title="CKEditor" />
       <header>CKEditor</header>
       <CardBody>
         {!isSSR && (

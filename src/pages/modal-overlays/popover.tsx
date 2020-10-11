@@ -6,14 +6,16 @@ import Popover from '@paljs/ui/Popover';
 import { Tabs, Tab } from '@paljs/ui/Tabs';
 import { Card, CardBody } from '@paljs/ui/Card';
 import { Button } from '@paljs/ui/Button';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import SEO from '../../components/SEO';
+import { useRouter } from 'next/router';
 
 export default function PopoverPage() {
+  const router = useRouter();
   return (
     <>
-      <SEO title="Popover" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Popover" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card size="Tiny">
@@ -109,11 +111,13 @@ export default function PopoverPage() {
                 <Button fullWidth>on focus</Button>
               </Popover>
               <ContextMenu
+                nextJs
+                currentPath={router.pathname}
                 className="with-margin inline-block"
                 placement="bottom"
                 items={[
-                  { title: 'Profile', link: { to: '/modal-overlays/tooltip' } },
-                  { title: 'Log out', link: { to: '/logout' } },
+                  { title: 'Profile', link: { href: '/modal-overlays/tooltip' } },
+                  { title: 'Log out', link: { href: '/logout' } },
                 ]}
                 Link={Link}
               >

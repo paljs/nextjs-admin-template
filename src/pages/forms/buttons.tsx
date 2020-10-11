@@ -3,13 +3,14 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import { Button, ButtonLink } from '@paljs/ui/Button';
 import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
-import { navigate } from 'gatsby';
 import React from 'react';
 import SEO from '../../components/SEO';
+import { useRouter } from 'next/router';
 
 const style = { marginBottom: '1.5rem' };
 
 export default function ButtonPage() {
+  const router = useRouter();
   const status: Status[] = ['Info', 'Success', 'Danger', 'Primary', 'Warning', 'Basic', 'Control'];
   return (
     <>
@@ -106,7 +107,7 @@ export default function ButtonPage() {
                   </Button>
                 </Col>
                 <Col style={style} breakPoint={{ xs: true }}>
-                  <ButtonLink onClick={() => navigate('/')} fullWidth shape="Rectangle">
+                  <ButtonLink onClick={() => router.push('/')} fullWidth shape="Rectangle">
                     Link
                   </ButtonLink>
                 </Col>

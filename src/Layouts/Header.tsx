@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled, { DefaultTheme } from 'styled-components';
 import Select from '@paljs/ui/Select';
 import { LayoutHeader } from '@paljs/ui/Layout';
@@ -8,8 +9,6 @@ import { Button } from '@paljs/ui/Button';
 import { Actions } from '@paljs/ui/Actions';
 import ContextMenu from '@paljs/ui/ContextMenu';
 import User from '@paljs/ui/User';
-import { getPathReady } from './Sidebar';
-import { Location } from '@reach/router';
 import { breakpointDown } from '@paljs/ui/breakpoints';
 
 const HeaderStyle = styled.div`
@@ -53,7 +52,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const themeOptions = [
+  const router = useRouter();
+  const themeOptions = () => [
     {
       value: 'default',
       label: (
@@ -106,19 +106,20 @@ const Header: React.FC<HeaderProps> = (props) => {
             },
             {
               content: (
-                <Link to="/" className="logo">
-                  Admin Template
+                <Link href="/">
+                  <a className="logo">Admin Template</a>
                 </Link>
               ),
             },
             {
               content: (
                 <SelectStyled
+                  instanceId="react-select-input"
                   isSearchable={false}
                   shape="SemiRound"
                   placeholder="Themes"
-                  value={themeOptions.find((item) => item.value === props.theme.value)}
-                  options={themeOptions}
+                  value={themeOptions().find((item) => item.value === props.theme.value)}
+                  options={themeOptions()}
                   onChange={({ value }: { value: DefaultTheme['name'] }) => props.theme.set(value)}
                 />
               ),
@@ -138,7 +139,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           actions={[
             {
               icon: 'github',
-              url: { href: 'https://github.com/paljs/gatsby-admin-template', target: '_blank' },
+              url: { href: 'https://github.com/paljs/nextjs-admin-template', target: '_blank' },
             },
             {
               icon: 'twitter',
@@ -146,22 +147,19 @@ const Header: React.FC<HeaderProps> = (props) => {
             },
             {
               content: (
-                <Location>
-                  {({ location }) => (
-                    <ContextMenu
-                      style={{ cursor: 'pointer' }}
-                      placement="bottom"
-                      currentPath={getPathReady(location.pathname)}
-                      items={[
-                        { title: 'Profile', link: { to: '/modal-overlays/tooltip' } },
-                        { title: 'Log out', link: { to: '/logout' } },
-                      ]}
-                      Link={Link}
-                    >
-                      <User image="url('/icons/icon-72x72.png')" name="Ahmed Elywa" title="Manger" size="Medium" />
-                    </ContextMenu>
-                  )}
-                </Location>
+                <ContextMenu
+                  nextJs
+                  style={{ cursor: 'pointer' }}
+                  placement="bottom"
+                  currentPath={router.pathname}
+                  items={[
+                    { title: 'Profile', link: { href: '/modal-overlays/tooltip' } },
+                    { title: 'Log out', link: { href: '/logout' } },
+                  ]}
+                  Link={Link}
+                >
+                  <User image="url('/icons/icon-72x72.png')" name="Ahmed Elywa" title="Manger" size="Medium" />
+                </ContextMenu>
               ),
             },
           ]}

@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 const Home = () => {
   return (
     <div>
-      <SEO title="Home" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Home" />
     </div>
   );
 };

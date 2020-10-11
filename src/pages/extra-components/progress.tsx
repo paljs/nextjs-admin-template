@@ -39,7 +39,7 @@ export default function ProgressPage() {
   const style = { marginBottom: '1rem' };
   return (
     <>
-      <SEO title="Progress" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Progress" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>

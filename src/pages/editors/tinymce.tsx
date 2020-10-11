@@ -9,7 +9,7 @@ export default function TinyMCE() {
   };
   return (
     <Card>
-      <SEO title="Tiny MCE" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Tiny MCE" />
       <header>Tiny MCE</header>
       <CardBody>
         <Editor

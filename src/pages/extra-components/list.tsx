@@ -29,7 +29,7 @@ const ListPage = () => {
   ];
   return (
     <>
-      <SEO title="List" keywords={['OAH', 'application', 'react']} />
+      <SEO title="List" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card size="Small">

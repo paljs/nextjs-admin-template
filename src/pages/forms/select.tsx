@@ -32,7 +32,7 @@ export default function SelectPage() {
   ];
   return (
     <>
-      <SEO title="Select" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Select" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card size="Small">

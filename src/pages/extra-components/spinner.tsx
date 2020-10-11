@@ -29,7 +29,7 @@ const SpinnerPage = () => {
 
   return (
     <>
-      <SEO title="Spinner" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Spinner" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card style={{ position: 'relative' }}>

@@ -37,7 +37,7 @@ const Box = styled.div<BoxProps>`
 const GridPage = () => {
   return (
     <>
-      <SEO title="Grid" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Grid" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>

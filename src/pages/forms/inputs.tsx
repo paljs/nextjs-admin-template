@@ -34,7 +34,7 @@ const InputPage = () => {
   };
   return (
     <>
-      <SEO title="Input" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Input" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>

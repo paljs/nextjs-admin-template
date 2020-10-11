@@ -8,7 +8,7 @@ import SEO from '../../components/SEO';
 export default function RevealCards() {
   return (
     <>
-      <SEO title="RevealCards" keywords={['OAH', 'application', 'react']} />
+      <SEO title="RevealCards" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <RevealCard>

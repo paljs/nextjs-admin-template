@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from 'next/router';
 
 export default function Index() {
+  const router = useRouter();
   useEffect(() => {
-    navigate('/forms/inputs');
+    router.push('/forms/inputs');
   }),
     [];
   return <div />;

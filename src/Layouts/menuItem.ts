@@ -4,7 +4,7 @@ const items: MenuItemType[] = [
   {
     title: 'Home Page',
     icon: { name: 'home' },
-    link: { to: '/dashboard' },
+    link: { href: '/dashboard' },
   },
   {
     title: 'FEATURES',
@@ -16,47 +16,47 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'Accordion',
-        link: { to: '/extra-components/accordion' },
+        link: { href: '/extra-components/accordion' },
       },
       {
         title: 'Actions',
-        link: { to: '/extra-components/actions' },
+        link: { href: '/extra-components/actions' },
       },
       {
         title: 'Alert',
-        link: { to: '/extra-components/alert' },
+        link: { href: '/extra-components/alert' },
       },
       {
         title: 'List',
-        link: { to: '/extra-components/list' },
+        link: { href: '/extra-components/list' },
       },
       {
         title: 'Spinner',
-        link: { to: '/extra-components/spinner' },
+        link: { href: '/extra-components/spinner' },
       },
       {
         title: 'Progress Bar',
-        link: { to: '/extra-components/progress' },
+        link: { href: '/extra-components/progress' },
       },
       {
         title: 'Tabs',
-        link: { to: '/extra-components/tabs' },
+        link: { href: '/extra-components/tabs' },
       },
       {
         title: 'Chat',
-        link: { to: '/extra-components/chat' },
+        link: { href: '/extra-components/chat' },
       },
       {
         title: 'Cards',
-        link: { to: '/extra-components/cards' },
+        link: { href: '/extra-components/cards' },
       },
       {
         title: 'Flip Card',
-        link: { to: '/extra-components/flip-card' },
+        link: { href: '/extra-components/flip-card' },
       },
       {
         title: 'Reveal Card',
-        link: { to: '/extra-components/reveal-card' },
+        link: { href: '/extra-components/reveal-card' },
       },
     ],
   },
@@ -66,19 +66,19 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'Inputs',
-        link: { to: '/forms/inputs' },
+        link: { href: '/forms/inputs' },
       },
       {
         title: 'Layout',
-        link: { to: '/forms/form-layout' },
+        link: { href: '/forms/form-layout' },
       },
       {
         title: 'Buttons',
-        link: { to: '/forms/buttons' },
+        link: { href: '/forms/buttons' },
       },
       {
         title: 'Select',
-        link: { to: '/forms/select' },
+        link: { href: '/forms/select' },
       },
     ],
   },
@@ -88,11 +88,11 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'Grid',
-        link: { to: '/ui-features/grid' },
+        link: { href: '/ui-features/grid' },
       },
       {
         title: 'Animated Searches',
-        link: { to: '/ui-features/search' },
+        link: { href: '/ui-features/search' },
       },
     ],
   },
@@ -102,15 +102,15 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'Popover',
-        link: { to: '/modal-overlays/popover' },
+        link: { href: '/modal-overlays/popover' },
       },
       {
         title: 'Tooltip',
-        link: { to: '/modal-overlays/tooltip' },
+        link: { href: '/modal-overlays/tooltip' },
       },
       {
         title: 'Toastr',
-        link: { to: '/modal-overlays/toastr' },
+        link: { href: '/modal-overlays/toastr' },
       },
     ],
   },
@@ -120,11 +120,11 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'TinyMCE',
-        link: { to: '/editors/tinymce' },
+        link: { href: '/editors/tinymce' },
       },
       {
         title: 'CKEditor',
-        link: { to: '/editors/ckeditor' },
+        link: { href: '/editors/ckeditor' },
       },
     ],
   },
@@ -134,7 +134,7 @@ const items: MenuItemType[] = [
     children: [
       {
         title: '404',
-        link: { to: '/miscellaneous/404' },
+        link: { href: '/miscellaneous/404' },
       },
     ],
   },
@@ -144,19 +144,19 @@ const items: MenuItemType[] = [
     children: [
       {
         title: 'Login',
-        link: { to: '/auth/login' },
+        link: { href: '/auth/login' },
       },
       {
         title: 'Register',
-        link: { to: '/auth/register' },
+        link: { href: '/auth/register' },
       },
       {
         title: 'Request Password',
-        link: { to: '/auth/request-password' },
+        link: { href: '/auth/request-password' },
       },
       {
         title: 'Reset Password',
-        link: { to: '/auth/reset-password' },
+        link: { href: '/auth/reset-password' },
       },
     ],
   },

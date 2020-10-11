@@ -34,7 +34,7 @@ export default function ChatPage() {
 
   return (
     <>
-      <SEO title="Chat" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Chat" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }} style={{ marginBottom: '1rem' }}>
           <Chat title="OAH Technology">

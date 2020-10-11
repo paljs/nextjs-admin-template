@@ -8,7 +8,7 @@ import SEO from '../../components/SEO';
 const alert = () => {
   return (
     <>
-      <SEO title="Alert" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Alert" />
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>

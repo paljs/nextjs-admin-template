@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, CardBody } from '@paljs/ui/Card';
 import { ButtonLink } from '@paljs/ui/Button';
-import { navigate } from 'gatsby';
 import styled from 'styled-components';
 
 import SEO from '../../components/SEO';
+import { useRouter } from 'next/router';
 
 const ErrorStyle = styled.div`
   width: 100%;
@@ -23,15 +23,16 @@ const ErrorStyle = styled.div`
   }
 `;
 export default function Error() {
+  const router = useRouter();
   return (
     <>
-      <SEO title="404 Page Not Found" keywords={['OAH', 'application', 'react']} />
+      <SEO title="404 Page Not Found" />
       <Card>
         <CardBody>
           <ErrorStyle>
             <h1>404 Page Not Found</h1>
             <small>The page you were looking for doesn&apos;t exist</small>
-            <ButtonLink fullWidth appearance="hero" onClick={() => navigate('/')} shape="Rectangle">
+            <ButtonLink fullWidth appearance="hero" onClick={() => router.push('/')} shape="Rectangle">
               Take me home
             </ButtonLink>
           </ErrorStyle>

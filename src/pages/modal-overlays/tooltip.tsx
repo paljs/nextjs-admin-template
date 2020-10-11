@@ -9,7 +9,7 @@ import SEO from '../../components/SEO';
 export default function TooltipPage() {
   return (
     <>
-      <SEO title="Tooltip" keywords={['OAH', 'application', 'react']} />
+      <SEO title="Tooltip" />
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>
