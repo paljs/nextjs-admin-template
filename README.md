@@ -1,13 +1,13 @@
-### gatsby-admin-template
+### nextjs-admin-template
 
-Admin dashboard template based on Gatsby with [@paljs/ui](https://github.com/paljs/ui) component package
+Admin dashboard template based on Next.js with [@paljs/ui](https://github.com/paljs/ui) component package
 
 #### Setup:
 
 ```
-git clone https://github.com/paljs/gatsby-admin-template.git
+git clone https://github.com/paljs/nextjs-admin-template.git
 
-cd gatsby-admin-template
+cd nextjs-admin-template
 
 yarn install
 

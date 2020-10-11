@@ -78,7 +78,7 @@ const GridPage = () => {
               <h2>Offsets</h2>
               <p>Offset a column.</p>
               <Row>
-                {Array.from(Array(11), (v, i) => {
+                {Array.from(Array(11), (_v, i) => {
                   return (
                     <Col key={i} offset={{ xs: 11 - i }} breakPoint={{ xs: i + 1 }}>
                       <Box row />

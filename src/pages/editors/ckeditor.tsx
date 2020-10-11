@@ -24,10 +24,10 @@ export default function CKEditorPage() {
               const data = editor.getData();
               console.log({ event, editor, data });
             }}
-            onBlur={(event: any, editor: any) => {
+            onBlur={(_event: any, editor: any) => {
               console.log('Blur.', editor);
             }}
-            onFocus={(event: any, editor: any) => {
+            onFocus={(_event: any, editor: any) => {
               console.log('Focus.', editor);
             }}
           />

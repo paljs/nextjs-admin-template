@@ -23,7 +23,9 @@ export default function Login() {
           <input type="password" placeholder="Password" />
         </InputGroup>
         <Group>
-          <Checkbox onChange={onCheckbox}>Remember me</Checkbox>
+          <Checkbox checked onChange={onCheckbox}>
+            Remember me
+          </Checkbox>
           <Link href="/auth/request-password">
             <a>Forgot Password?</a>
           </Link>
