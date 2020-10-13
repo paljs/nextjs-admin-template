@@ -3,12 +3,11 @@ import RevealCard from '@paljs/ui/RevealCard';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export default function RevealCards() {
   return (
-    <>
-      <SEO title="RevealCards" />
+    <Layout title="RevealCards">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <RevealCard>
@@ -39,6 +38,6 @@ export default function RevealCards() {
           </RevealCard>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

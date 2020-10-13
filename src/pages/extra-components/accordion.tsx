@@ -4,14 +4,13 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React, { useRef } from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const Accordions = () => {
   const accordionRef = useRef<AccordionRefObject>(null);
   const style = { marginBottom: '1.5rem' };
   return (
-    <>
-      <SEO title="Accordions" />
+    <Layout title="Accordions">
       <Row>
         <Col breakPoint={{ xs: 12, lg: 6 }}>
           <Card>
@@ -72,7 +71,7 @@ const Accordions = () => {
           </Accordion>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 

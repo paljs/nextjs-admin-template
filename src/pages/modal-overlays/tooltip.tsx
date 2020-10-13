@@ -4,12 +4,11 @@ import Tooltip from '@paljs/ui/Tooltip';
 import { Card, CardBody } from '@paljs/ui/Card';
 import { Button } from '@paljs/ui/Button';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export default function TooltipPage() {
   return (
-    <>
-      <SEO title="Tooltip" />
+    <Layout title="Tooltip">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>
@@ -111,6 +110,6 @@ export default function TooltipPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

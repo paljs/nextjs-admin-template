@@ -35,7 +35,7 @@ const SEO: React.FC<SEOProps> = ({ description, keywords, title }) => (
   </Head>
 );
 
-interface SEOProps {
+export interface SEOProps {
   description?: string;
   lang?: string;
   meta?: any[];

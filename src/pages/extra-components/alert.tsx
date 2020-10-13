@@ -3,12 +3,11 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const alert = () => {
   return (
-    <>
-      <SEO title="Alert" />
+    <Layout title="Alert">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>
@@ -86,7 +85,7 @@ const alert = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 

@@ -7,7 +7,7 @@ import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -33,8 +33,7 @@ const InputPage = () => {
     // value will be item value
   };
   return (
-    <>
-      <SEO title="Input" />
+    <Layout title="Input">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>
@@ -139,7 +138,7 @@ const InputPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default InputPage;

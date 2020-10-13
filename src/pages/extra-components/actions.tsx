@@ -4,7 +4,7 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const ActionsPage = () => {
   const items: ActionType[] = [
@@ -52,8 +52,7 @@ const ActionsPage = () => {
     },
   ];
   return (
-    <>
-      <SEO title="Actions" keywords={['OAH', 'application', 'react']} />
+    <Layout title="Actions">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>
@@ -73,7 +72,7 @@ const ActionsPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default ActionsPage;

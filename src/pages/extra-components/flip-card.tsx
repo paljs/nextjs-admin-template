@@ -3,12 +3,11 @@ import FlipCard from '@paljs/ui/FlipCard';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export default function FlipCards() {
   return (
-    <>
-      <SEO title="FlipCards" />
+    <Layout title="FlipCards">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <FlipCard>
@@ -39,6 +38,6 @@ export default function FlipCards() {
           </FlipCard>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

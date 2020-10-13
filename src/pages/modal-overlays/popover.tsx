@@ -8,14 +8,13 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import { Button } from '@paljs/ui/Button';
 import Link from 'next/link';
 
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 import { useRouter } from 'next/router';
 
 export default function PopoverPage() {
   const router = useRouter();
   return (
-    <>
-      <SEO title="Popover" />
+    <Layout title="Popover">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card size="Tiny">
@@ -127,6 +126,6 @@ export default function PopoverPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

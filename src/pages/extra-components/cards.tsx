@@ -2,12 +2,11 @@ import { Card, CardBody, CardHeader, CardFooter } from '@paljs/ui/Card';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export default function Cards() {
   return (
-    <>
-      <SEO title="Cards" />
+    <Layout title="Cards">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card>
@@ -59,6 +58,6 @@ export default function Cards() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

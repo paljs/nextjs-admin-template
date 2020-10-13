@@ -4,7 +4,7 @@ import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
 import React from 'react';
 import styled from 'styled-components';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export const SelectStyled = styled(Select)`
   margin-bottom: 1rem;
@@ -31,8 +31,7 @@ export default function SelectPage() {
     { value: 'Default', label: 'Default' },
   ];
   return (
-    <>
-      <SEO title="Select" />
+    <Layout title="Select">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card size="Small">
@@ -43,6 +42,6 @@ export default function SelectPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

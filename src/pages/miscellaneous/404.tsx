@@ -3,7 +3,7 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import { ButtonLink } from '@paljs/ui/Button';
 import styled from 'styled-components';
 
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 import { useRouter } from 'next/router';
 
 const ErrorStyle = styled.div`
@@ -25,8 +25,7 @@ const ErrorStyle = styled.div`
 export default function Error() {
   const router = useRouter();
   return (
-    <>
-      <SEO title="404 Page Not Found" />
+    <Layout title="404 Page Not Found">
       <Card>
         <CardBody>
           <ErrorStyle>
@@ -38,6 +37,6 @@ export default function Error() {
           </ErrorStyle>
         </CardBody>
       </Card>
-    </>
+    </Layout>
   );
 }

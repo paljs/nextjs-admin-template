@@ -4,7 +4,7 @@ import User from '@paljs/ui/User';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const ListPage = () => {
   const userList = [
@@ -28,8 +28,7 @@ const ListPage = () => {
     'Peaches',
   ];
   return (
-    <>
-      <SEO title="List" />
+    <Layout title="List">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }}>
           <Card size="Small">
@@ -54,7 +53,7 @@ const ListPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default ListPage;

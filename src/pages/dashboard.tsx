@@ -1,11 +1,7 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import Layout from 'Layouts';
 
 const Home = () => {
-  return (
-    <div>
-      <SEO title="Home" />
-    </div>
-  );
+  return <Layout title="Home" />;
 };
 export default Home;

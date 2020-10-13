@@ -5,7 +5,7 @@ import Col from '@paljs/ui/Col';
 import styled, { css } from 'styled-components';
 import React from 'react';
 
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 interface BoxProps {
   nested?: boolean;
@@ -36,8 +36,7 @@ const Box = styled.div<BoxProps>`
 
 const GridPage = () => {
   return (
-    <>
-      <SEO title="Grid" />
+    <Layout title="Grid">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>
@@ -246,7 +245,7 @@ const GridPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default GridPage;

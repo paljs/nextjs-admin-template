@@ -5,7 +5,7 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import { Card, CardBody } from '@paljs/ui/Card';
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const SpinnerPage = () => {
   const [show, setShow] = useState(false);
@@ -28,8 +28,7 @@ const SpinnerPage = () => {
   };
 
   return (
-    <>
-      <SEO title="Spinner" />
+    <Layout title="Spinner">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card style={{ position: 'relative' }}>
@@ -118,7 +117,7 @@ const SpinnerPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default SpinnerPage;

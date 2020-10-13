@@ -4,7 +4,7 @@ import { Button, ButtonLink } from '@paljs/ui/Button';
 import Col from '@paljs/ui/Col';
 import Row from '@paljs/ui/Row';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 import { useRouter } from 'next/router';
 
 const style = { marginBottom: '1.5rem' };
@@ -13,8 +13,7 @@ export default function ButtonPage() {
   const router = useRouter();
   const status: Status[] = ['Info', 'Success', 'Danger', 'Primary', 'Warning', 'Basic', 'Control'];
   return (
-    <>
-      <SEO title="Button" keywords={['OAH', 'application', 'react']} />
+    <Layout title="Button">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>
@@ -116,6 +115,6 @@ export default function ButtonPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

@@ -3,12 +3,11 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import { Card } from '@paljs/ui/Card';
 import React from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const TabPage = () => {
   return (
-    <>
-      <SEO title="Tabs" />
+    <Layout title="Tabs">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>
@@ -41,7 +40,7 @@ const TabPage = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 };
 export default TabPage;

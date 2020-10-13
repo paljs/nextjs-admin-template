@@ -8,6 +8,7 @@ import { Checkbox } from '@paljs/ui/Checkbox';
 import { InputGroup } from '@paljs/ui/Input';
 import Select from '@paljs/ui/Select';
 import styled from 'styled-components';
+import Layout from 'Layouts';
 
 const SelectStyled = styled(Select)`
   margin-bottom: 1rem;
@@ -62,68 +63,73 @@ export default function ToastrPage() {
   ];
 
   return (
-    <Row>
-      <Col breakPoint={{ xs: 12 }}>
-        <Toastr ref={toastrRef} />
-        <Card>
-          <header>Toaster configuration</header>
-          <CardBody>
-            <Row>
-              <Col breakPoint={{ xs: 12, md: 6 }}>
-                <SelectStyled
-                  fullWidth
-                  placeholder="Place to show toast"
-                  options={positionOptions}
-                  value={positionOptions.find((position) => position.value === data.position)}
-                  onChange={(v: Option) => onChangeHandle('position', v.value)}
-                />
-                <InputGroup fullWidth>
-                  <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-                </InputGroup>
-                <InputGroup fullWidth>
-                  <input
-                    type="text"
-                    placeholder="Message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+    <Layout title="Toaster">
+      <Row>
+        <Col breakPoint={{ xs: 12 }}>
+          <Toastr ref={toastrRef} />
+          <Card>
+            <header>Toaster configuration</header>
+            <CardBody>
+              <Row>
+                <Col breakPoint={{ xs: 12, md: 6 }}>
+                  <SelectStyled
+                    fullWidth
+                    placeholder="Place to show toast"
+                    options={positionOptions}
+                    value={positionOptions.find((position) => position.value === data.position)}
+                    onChange={(v: Option) => onChangeHandle('position', v.value)}
                   />
-                </InputGroup>
-                <InputGroup fullWidth>
-                  <input
-                    placeholder="Time to hide toast, ms. 0 to persistent toast"
-                    type="number"
-                    value={data.duration}
-                    onChange={(e) => onChangeHandle('duration', e.target.valueAsNumber)}
+                  <InputGroup fullWidth>
+                    <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                  </InputGroup>
+                  <InputGroup fullWidth>
+                    <input
+                      type="text"
+                      placeholder="Message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
+                  </InputGroup>
+                  <InputGroup fullWidth>
+                    <input
+                      placeholder="Time to hide toast, ms. 0 to persistent toast"
+                      type="number"
+                      value={data.duration}
+                      onChange={(e) => onChangeHandle('duration', e.target.valueAsNumber)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col breakPoint={{ xs: 12, md: 6 }}>
+                  <SelectStyled
+                    fullWidth
+                    placeholder="Toast Status"
+                    options={statusOption}
+                    value={statusOption.find((state) => state.value === data.status)}
+                    onChange={(v: Option) => onChangeHandle('status', v.value)}
                   />
-                </InputGroup>
-              </Col>
-              <Col breakPoint={{ xs: 12, md: 6 }}>
-                <SelectStyled
-                  fullWidth
-                  placeholder="Toast Status"
-                  options={statusOption}
-                  value={statusOption.find((state) => state.value === data.status)}
-                  onChange={(v: Option) => onChangeHandle('status', v.value)}
-                />
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <Checkbox checked={!!data.destroyByClick} onChange={(v) => onChangeHandle('destroyByClick', v)}>
-                    Hide on click
-                  </Checkbox>
-                  <Checkbox checked={!!data.preventDuplicates} onChange={(v) => onChangeHandle('preventDuplicates', v)}>
-                    Prevent arising of duplicate toast
-                  </Checkbox>
-                  <Checkbox checked={!!data.hasIcon} onChange={(v) => onChangeHandle('hasIcon', v)}>
-                    Show toast with icon
-                  </Checkbox>
-                </div>
-              </Col>
-            </Row>
-          </CardBody>
-          <footer>
-            <Button onClick={showToastr}>Show Toastr</Button>
-          </footer>
-        </Card>
-      </Col>
-    </Row>
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <Checkbox checked={!!data.destroyByClick} onChange={(v) => onChangeHandle('destroyByClick', v)}>
+                      Hide on click
+                    </Checkbox>
+                    <Checkbox
+                      checked={!!data.preventDuplicates}
+                      onChange={(v) => onChangeHandle('preventDuplicates', v)}
+                    >
+                      Prevent arising of duplicate toast
+                    </Checkbox>
+                    <Checkbox checked={!!data.hasIcon} onChange={(v) => onChangeHandle('hasIcon', v)}>
+                      Show toast with icon
+                    </Checkbox>
+                  </div>
+                </Col>
+              </Row>
+            </CardBody>
+            <footer>
+              <Button onClick={showToastr}>Show Toastr</Button>
+            </footer>
+          </Card>
+        </Col>
+      </Row>
+    </Layout>
   );
 }

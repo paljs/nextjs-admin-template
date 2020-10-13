@@ -4,8 +4,8 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React, { useState } from 'react';
 
-import SEO from '../../components/SEO';
-import defaultMessages from '../../components/messages';
+import Layout from 'Layouts';
+import defaultMessages from 'components/messages';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<MessageProps[]>(defaultMessages);
@@ -33,8 +33,7 @@ export default function ChatPage() {
   };
 
   return (
-    <>
-      <SEO title="Chat" />
+    <Layout title="Chat">
       <Row>
         <Col breakPoint={{ xs: 12, md: 6 }} style={{ marginBottom: '1rem' }}>
           <Chat title="OAH Technology">
@@ -56,6 +55,6 @@ export default function ChatPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

@@ -5,9 +5,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
-import Auth from '../../components/Auth';
-import SEO from '../../components/SEO';
-import Socials from '../../components/Auth/Socials';
+import Auth from 'components/Auth';
+import Layout from 'Layouts';
+import Socials from 'components/Auth/Socials';
 
 const Input = styled(InputGroup)`
   margin-bottom: 2rem;
@@ -18,38 +18,39 @@ export default function Register() {
     // v will be true or false
   };
   return (
-    <Auth title="Create new account">
-      <SEO title="Register" keywords={['OAH', 'application', 'react']} />
-      <form>
-        <Input fullWidth>
-          <input type="text" placeholder="Username" />
-        </Input>
-        <Input fullWidth>
-          <input type="email" placeholder="Email Address" />
-        </Input>
-        <Input fullWidth>
-          <input type="password" placeholder="Password" />
-        </Input>
-        <Input fullWidth>
-          <input type="password" placeholder="Confirm Password" />
-        </Input>
-        <Checkbox checked onChange={onCheckbox}>
-          Agree to{' '}
-          <Link href="/">
-            <a>Terms & Conditions</a>
+    <Layout title="Register">
+      <Auth title="Create new account">
+        <form>
+          <Input fullWidth>
+            <input type="text" placeholder="Username" />
+          </Input>
+          <Input fullWidth>
+            <input type="email" placeholder="Email Address" />
+          </Input>
+          <Input fullWidth>
+            <input type="password" placeholder="Password" />
+          </Input>
+          <Input fullWidth>
+            <input type="password" placeholder="Confirm Password" />
+          </Input>
+          <Checkbox checked onChange={onCheckbox}>
+            Agree to{' '}
+            <Link href="/">
+              <a>Terms & Conditions</a>
+            </Link>
+          </Checkbox>
+          <Button status="Success" type="button" shape="SemiRound" fullWidth>
+            Register
+          </Button>
+        </form>
+        <Socials />
+        <p>
+          Already have an account?{' '}
+          <Link href="/auth/login">
+            <a>Log In</a>
           </Link>
-        </Checkbox>
-        <Button status="Success" type="button" shape="SemiRound" fullWidth>
-          Register
-        </Button>
-      </form>
-      <Socials />
-      <p>
-        Already have an account?{' '}
-        <Link href="/auth/login">
-          <a>Log In</a>
-        </Link>
-      </p>
-    </Auth>
+        </p>
+      </Auth>
+    </Layout>
   );
 }

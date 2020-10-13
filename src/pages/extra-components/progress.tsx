@@ -6,7 +6,7 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import styled from 'styled-components';
 import React, { useState, useEffect } from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 const Container = styled.div`
   display: flex;
@@ -38,8 +38,7 @@ export default function ProgressPage() {
 
   const style = { marginBottom: '1rem' };
   return (
-    <>
-      <SEO title="Progress" />
+    <Layout title="Progress">
       <Row>
         <Col breakPoint={{ xs: 12 }}>
           <Card>
@@ -125,6 +124,6 @@ export default function ProgressPage() {
           </Card>
         </Col>
       </Row>
-    </>
+    </Layout>
   );
 }

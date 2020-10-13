@@ -3,7 +3,7 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
+import Layout from 'Layouts';
 
 export default function SearchPage() {
   const [value, setValue] = useState('');
@@ -18,8 +18,7 @@ export default function SearchPage() {
     'column-curtain',
   ];
   return (
-    <>
-      <SEO title="Animated Searches" keywords={['OAH', 'application', 'react']} />
+    <Layout title="Animated Searches">
       <Row>
         {type.map((key) => (
           <Col breakPoint={{ xs: 12, md: 6 }} key={key}>
@@ -33,6 +32,6 @@ export default function SearchPage() {
           </Col>
         ))}
       </Row>
-    </>
+    </Layout>
   );
 }
