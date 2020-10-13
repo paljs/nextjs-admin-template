@@ -34,7 +34,6 @@ const HeaderStyle = styled.div`
     display: flex;
     align-items: center;
     .github {
-      color: white;
       font-size: 18px;
       margin-right: 5px;
     }
