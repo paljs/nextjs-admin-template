@@ -159,6 +159,17 @@ const Header: React.FC<HeaderProps> = (props) => {
               ),
             },
             {
+              content: (
+                <a
+                  href="https://paljs.slack.com/join/shared_invite/zt-i3x5uw5z-O5TAmshAazzaqGxW5EVg8Q#/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img height="20" src="/slack.svg" alt="slack" />
+                </a>
+              ),
+            },
+            {
               icon: 'twitter',
               url: { href: 'https://twitter.com/AhmedElywh', target: '_blank' },
             },
