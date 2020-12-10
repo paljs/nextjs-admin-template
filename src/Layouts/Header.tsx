@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             {
               content: (
                 <a
-                  href="https://paljs.slack.com/join/shared_invite/zt-i4z1bx9j-CnPaPRR8dtKsKfALCKSRKQ#/"
+                  href="https://join.slack.com/t/paljs/shared_invite/zt-ju5j9bb9-onkc9ZksqPZq~yIYJ3BfKw"
                   target="_blank"
                   rel="noreferrer"
                 >
