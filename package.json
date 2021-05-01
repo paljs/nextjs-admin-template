@@ -5,16 +5,16 @@
   "version": "0.1.0",
   "author": "Ahmed Elywa",
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "26.0.0",
+    "@ckeditor/ckeditor5-build-classic": "27.1.0",
     "@ckeditor/ckeditor5-react": "3.0.2",
     "@paljs/icons": "1.0.5",
     "@paljs/ui": "1.1.1",
-    "@tinymce/tinymce-react": "3.11.0",
+    "@tinymce/tinymce-react": "3.12.3",
     "babel-plugin-styled-components": "^1.12.0",
-    "next": "^10.0.9",
+    "next": "^10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "5.2.1"
+    "styled-components": "5.2.3"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port ${PORT-3000}",
     "prepare": "husky install"
   },
   "repository": {
@@ -37,23 +37,23 @@
     "url": "https://github.com/paljs/nextjs-admin-template/issues"
   },
   "devDependencies": {
-    "@types/node": "14.14.35",
-    "@types/react": "17.0.3",
+    "@types/node": "15.0.1",
+    "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
-    "@types/react-select": "4.0.13",
+    "@types/react-select": "4.0.15",
     "@types/styled-components": "5.1.9",
-    "@typescript-eslint/eslint-plugin": "4.19.0",
-    "@typescript-eslint/parser": "4.19.0",
-    "eslint": "7.22.0",
-    "eslint-config-prettier": "8.1.0",
-    "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-react": "7.23.0",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "eslint": "7.25.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "7.23.2",
     "gh-pages": "3.1.0",
-    "husky": "5.2.0",
+    "husky": "6.0.0",
     "prettier": "2.2.1",
     "pretty-quick": "3.1.0",
     "react-live": "2.2.3",
-    "typescript": "4.2.3"
+    "typescript": "4.2.4"
   },
   "husky": {
     "hooks": {
